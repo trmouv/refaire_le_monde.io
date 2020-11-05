@@ -367,6 +367,7 @@
 
   /* DEBUT menu mobile*/
   section.menu_mobile{
+    z-index: 2;
     position: relative;
     height: 60px;
     background:rgba(255, 255, 255, 0.5);
@@ -381,7 +382,7 @@
     z-index: 2;
     top: 0;
     left: 0;
-    background: linear-gradient(180deg, rgba(207, 153, 161, 0.8) 0%, rgba(246, 186, 182, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(207, 153, 161, 0.9) 0%, rgba(246, 186, 182, 0.9) 100%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     overflow-x: hidden;
@@ -718,6 +719,10 @@ section h2 {
     color: #D90429;
 }
 
+section.hero{
+  padding-top: 10vh;
+}
+
 .hero p{
     margin-bottom: 10%;
 }
@@ -726,15 +731,14 @@ section h2 {
     margin-bottom: 0;
 }
 
-nav{
-    font-family: 'Dosis', sans-serif;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+header.menu_desktop{
+  font-size: 1.2em;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-#navigation_top{
-    float: right;
+#navigation_top ul{
     list-style: none;
 }
 
@@ -744,12 +748,6 @@ nav{
     font-weight: 500;
     font-size: 1.1em;
     color: #5b6065;
-}
-
-#navigation_top li:first-child{
-    display: inline;
-    margin-left: 10px;
-    margin-right: 20px;
 }
 
 #navigation_top li:hover{
