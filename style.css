@@ -358,6 +358,13 @@
     display: none;
   }
 
+  .menu_bar button {
+    padding: 0.7em 1em 0.7em 1em;
+    margin-top: 0.55em;
+    margin-right: 0.5em;
+    float: right;
+  }
+
   /* DEBUT menu mobile*/
   section.menu_mobile{
     position: relative;
@@ -371,7 +378,7 @@
     height: 100vh;
     width: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.8) 0%, rgba(246, 186, 182, 0.8) 100%);
@@ -404,12 +411,14 @@
   }
 
   span.burger_btn{
+    color: #D90429;
     font-size: 2em;
     cursor: pointer;
     position: absolute;
     top: 0.3em;
     left: 0.5em;
   }
+
   /* FIN menu mobile*/
 
   .footer_bottom{
@@ -432,6 +441,7 @@
 @media all and (max-width: 759px){
   
   section{
+    z-index: 1;
     width: 95%;
     margin-bottom: 3rem;
     margin-left: auto;
@@ -518,6 +528,7 @@
 @media screen and (min-width: 760px) and (max-width: 1150px){
   
     section{
+      z-index: 1;
       width: 95%;
       margin-bottom: 3rem;
       margin-left: auto;
@@ -537,6 +548,7 @@
     }
 
     article.activites{
+        z-index: 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -547,6 +559,7 @@
     }
 
     article.interventions{
+        z-index: 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -591,6 +604,7 @@
   }
 
   section{
+    z-index: 1;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -729,12 +743,14 @@ nav{
 }
 
 .box_4{
+    z-index: 1;
     height: 20rem;
     position: relative;
     border-radius: 15px;
 }
 
 .box_4 div{
+    z-index: 1;
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
