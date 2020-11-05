@@ -363,6 +363,7 @@
     height: 5.6vh;
     background:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 100%;
   }
   .sidenav {
@@ -374,6 +375,7 @@
     left: 0;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.8) 0%, rgba(246, 186, 182, 0.8) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -734,6 +736,7 @@ nav{
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #fff;
     position: absolute;
     bottom: 0px;
@@ -795,6 +798,7 @@ nav{
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #fff;
     position: absolute;
     bottom: 0px;
@@ -835,6 +839,7 @@ nav{
 #plus{
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .spectacles{
@@ -860,6 +865,7 @@ nav{
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #fff;
     position: absolute;
     bottom: 0px;
@@ -893,12 +899,14 @@ nav{
     padding: 1em 1em 1em 2em;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
 }
 
 .author{
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 6px -5px 100px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     text-align: center;
