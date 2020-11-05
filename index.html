@@ -11,7 +11,17 @@
     </head>
     <body>
         <div class="fond_top"></div>
-        <header>
+        <section class="menu_mobile">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        <span class="burger_btn" onclick="openNav()">&#9776;</span>
+        </section>
+        <header class="menu_desktop">
             <nav>
                 <ul id="navigation_top">
                     <li>Accueil</li>
@@ -150,5 +160,14 @@
             </div>
         </footer>
         <div class="fond_bottom"></div>
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "50vh";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </body>
 </html>

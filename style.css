@@ -349,8 +349,81 @@
   }
 
 /* Fin normalize CSS */
+
+/* Media Queries */
+@media all and (max-width: 1150px){
+
+  header.menu_desktop{
+    display: none;
+  }
+
+  /* menu mobile*/
+  section.menu_mobile{
+    height: 50px;
+    background-color: #fff;
+    width: 100%;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #D90429;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  span.burger_btn{
+    position: absolute;
+    top: 10px;
+    left: 1em;
+    font-size: 3em;
+    cursor: pointer;
+    background-color: #D90429;
+    height: 4em;
+    width: 4em;
+  }
+  /* menu mobile*/
+
+}
 @media all and (max-width: 759px){
-    article.activites{
+  
+  section{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header.menu_desktop{
+    display: none;
+  }
+  
+  article.activites{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -399,8 +472,16 @@
         ".";
     }
 }
-@media screen and (min-width: 760px) and (max-width: 1140px){
-    article.activites{
+
+@media screen and (min-width: 760px) and (max-width: 1150px){
+  
+  section{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  article.activites{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -432,6 +513,23 @@
     }
 
 }
+
+@media all and (min-width: 1150px){
+  
+  section.menu_mobile{
+    display: none;
+  }
+
+  section{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    touch-action: auto;
+  }
+
+}
+/* fin Media Queries */
 
 body{
     font-family: 'Dosis', sans-serif;
@@ -479,14 +577,6 @@ button{
     background-color: #D90429;
     border-radius: 15px;
     padding: 1em 1.5em 1em 1.5em;
-}
-
-section{
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
-    touch-action: auto;
 }
 
 section h2 {
