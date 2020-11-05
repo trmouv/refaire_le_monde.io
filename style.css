@@ -360,9 +360,9 @@
 
   .menu_bar button {
     padding: 0.7em 1em 0.7em 1em;
-    margin-top: 0.55em;
-    margin-right: 0.5em;
-    float: right;
+    position: absolute;
+    top: 0.55em;
+    right: 1em;
   }
 
   /* DEBUT menu mobile*/
