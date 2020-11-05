@@ -351,16 +351,18 @@
 /* Fin normalize CSS */
 
 /* Media Queries */
+/* Pour les écrans jusqu'à 1150px de largeur */
 @media all and (max-width: 1150px){
 
   header.menu_desktop{
     display: none;
   }
 
-  /* menu mobile*/
+  /* DEBUT menu mobile*/
   section.menu_mobile{
-    height: 50px;
-    background-color: #fff;
+    height: 5.6vh;
+    background:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
     width: 100%;
   }
   .sidenav {
@@ -399,28 +401,53 @@
   }
 
   span.burger_btn{
-    position: absolute;
-    top: 10px;
-    left: 1em;
     font-size: 3em;
     cursor: pointer;
     background-color: #D90429;
-    height: 4em;
-    width: 4em;
+    padding: 1vh 1vh 1vh 1vh;
   }
-  /* menu mobile*/
+  /* FIN menu mobile*/
+
+  .footer_bottom{
+    font-family: 'Dosis', sans-serif ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_bottom div{
+    margin-bottom: 1em;
+  }
 
 }
+
+/* Pour les MOBILES jusqu'à 759px de largeur */
 @media all and (max-width: 759px){
   
   section{
     width: 95%;
+    margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   header.menu_desktop{
     display: none;
+  }
+
+  .fond_bottom{
+    background-image: url("images/fond_bottom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: scaleX(-1);
+    width: 100%;
+    height: 150vh;
+    bottom: 0px;
+    z-index: -1;
   }
   
   article.activites{
@@ -471,17 +498,41 @@
         "."
         ".";
     }
+
+    footer nav.nav_footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 80%;
+      margin-top: 5vh;
+    }
+
 }
 
+/* Pour les TABLETTES de 760px à 1150px de largeur */
 @media screen and (min-width: 760px) and (max-width: 1150px){
   
-  section{
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    section{
+      width: 95%;
+      margin-bottom: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  article.activites{
+    .fond_bottom{
+      background-image: url("images/fond_bottom.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      transform: scaleX(-1);
+      width: 100%;
+      height: 140vh;
+      bottom: 0px;
+      z-index: -1;
+    }
+
+    article.activites{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -512,23 +563,71 @@
         ".";
     }
 
+    footer nav.nav_footer{
+      width: 80%;
+      margin-top: 5vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1em;
+      grid-template-areas:
+      ". ."
+      ". .";
+    }
+
+    
+
 }
 
+/* Pour les ECRANS à partir de 1150px de largeur */
 @media all and (min-width: 1150px){
-  
+
   section.menu_mobile{
     display: none;
   }
 
   section{
-    width: 85%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
     touch-action: auto;
   }
 
+  .fond_bottom{
+    background-image: url("images/fond_bottom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: scaleX(-1);
+    width: 100%;
+    height: 77vh;
+    bottom: 0px;
+    z-index: -1;
+  }
+
+  footer nav.nav_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 80%;
+    margin-top: 5vh;
+  }
+
+  .footer_bottom{
+    font-family: 'Dosis', sans-serif ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 }
+
 /* fin Media Queries */
 
 body{
@@ -537,26 +636,14 @@ body{
 }
 
 .fond_top{
-    background-image: url("images/fond_top.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    top: -10vh;
-    z-index: -1;
-}
-
-.fond_bottom{
-    background-image: url("images/fond_bottom.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    transform: scaleX(-1);
-    width: 100%;
-    height: 80vh;
-    bottom: 0px;
-    z-index: -1;
+  background-image: url("images/fond_top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: -10vh;
+  z-index: -1;
 }
 
 p{
@@ -566,6 +653,12 @@ p{
 h1, h2, h3 {
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
+}
+
+a{
+  color: #D90429;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 button{
@@ -831,25 +924,7 @@ nav{
 footer {
     padding-bottom: 1em;
 }
-footer .nav_footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 85%;
-    margin-top: 5vh;
-}
 
 footer .nav_footer section ul{
     list-style: none;
-}
-
-.footer_bottom{
-    font-family: 'Dosis', sans-serif ;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
