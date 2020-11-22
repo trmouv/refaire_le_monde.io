@@ -11,10 +11,47 @@
     </head>
     <body>
         <div class="fond_top"></div>
-<!-- Début menu -->          
-<?php include(menu.php) ?>
-<!-- Fin menu -->        
-        </section>
+<!-- Début menu -->
+<!-- Ajout PHP include -->           
+<section class="menu_mobile">
+    <div class="menu_bar"><span class="burger_btn" onclick="openNav()">&#9776;</span><button>&#9990; Contactez-moi</button></div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Accueil</a>
+        <a href="./domaines_intervention;html">Domaines d'intervention</a>
+        <a href="./creation.html">Création</a>
+        <a href="./spectacles.html">Spectacles</a>
+        <a href="./concerts.html">Concerts</a>
+        <a href="./actualites.html">Actualités</a>
+        <a href="./a_propos.html">À propos</a>
+        </div>
+    </section>
+    <section>
+    <header class="menu_desktop">
+        <nav>
+            <ul>
+                <li class="menu_first_lvl"><a>Accueil</a></li>
+                <li class="deroulant"><a href="./domaines_intervention.html">Domaines d'intervention &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="./art_therapie.html">Art Thérapie</a></li>
+                        <li><a href="./musicotherapie.html">Musicothérapie</a></li>
+                        <li><a href="./sejours_adaptes.html">Sejours adaptés</a></li>
+                        <li><a href="./sejours_creatifs.html">Séjours créatifs</a></li>
+                        <li><a href="./education_nationale.html">Éducation Nationale</a></li>
+                    </ul>
+                </li>
+                <li class="menu_first_lvl"><a href="./art_creation.html">Création</a></li>
+                <li class="menu_first_lvl"><a href="./spectacles.html">Spectacles</a></li>
+                <li class="menu_first_lvl"><a href="./art_concerts.html">Concerts</a></li>
+                <li class="menu_first_lvl"><a href="./art_actualite.html">Actualités</a></li>
+                <li class="menu_first_lvl"><a href="./a_propos.html">À propos</a></li>
+                <li class="menu_first_lvl" id="contact_btn_menu"><a href="./contact.html">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+    </section>
+<!-- Fin menu -->
+<!-- Main --> 
         <section class="hero">
             <h1>Refaire le monde</h1>
             <p>Créations, compositions et productions musicales originales</p>
@@ -78,7 +115,8 @@
                 <button>Voir la suite</button>
             </article>
         </section>
-
+<!-- Fin Main -->
+<!-- Début Footer -->
         <footer>
             <nav class="nav_footer">
             <section>
@@ -129,6 +167,7 @@
                 <div>Une conception originale by <a href="https://trmouv.fr" alt="Création de site web TR Mouv">TR Mouv</a></div>
             </div>
         </footer>
+<!-- Fin Footer -->
         <div class="fond_bottom"></div>
         <script>
             function openNav() {
