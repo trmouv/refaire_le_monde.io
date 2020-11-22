@@ -503,6 +503,17 @@
     ".";
   }
 
+  .box_1{
+    z-index: 1;
+    height: 50vh;
+    position: relative;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/art_therapie_home.JPG);
+  }
+
   footer nav.nav_footer{
     display: flex;
     flex-direction: row;
@@ -596,6 +607,17 @@
         ".";
     }
 
+    .box_1{
+      z-index: 1;
+      height: 60vh;
+      position: relative;
+      border-radius: 15px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(images/art_therapie_home.JPG);
+    }
+
     .actualites{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -677,6 +699,17 @@
     ". ."
     ". ."
     ". .";
+  }
+
+  .box_1{
+    z-index: 1;
+    height: 70vh;
+    position: relative;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/art_therapie_home.JPG);
   }
 
   footer nav.nav_footer{
@@ -1012,17 +1045,6 @@ header .deroulant > a::after{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: brown;
-}
-
-.box_1{
-  z-index: 1;
-  height: 70vh;
-  position: relative;
-  border-radius: 15px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(images/art_therapie_home.JPG);
 }
 
 .box_1 h1{
