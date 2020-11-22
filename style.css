@@ -354,6 +354,11 @@
 /* Pour les écrans jusqu'à 1150px de largeur */
 @media all and (max-width: 1150px){
 
+  main{
+    padding-top: 0em;
+    z-index: 1;
+  }
+  
   header.menu_desktop{
     display: none;
   }
@@ -536,6 +541,16 @@
       margin-right: auto;
     }
 
+    .article_first_template{
+      width: 60%;
+      margin: 0 auto 0 auto; 
+      text-align: justify;
+    }
+
+    .slideshow_first_template{
+      width: 60%;
+    }
+
     .fond_bottom{
       background-image: url("images/fond_bottom.png");
       background-repeat: no-repeat;
@@ -612,6 +627,11 @@
 /* Pour les ECRANS à partir de 1150px de largeur */
 @media all and (min-width: 1150px){
 
+  main{
+    padding-top: 10em;
+    z-index: 1;
+  }
+
   section.menu_mobile{
     display: none;
   }
@@ -623,6 +643,16 @@
     margin-right: auto;
     margin-bottom: 3rem;
     touch-action: auto;
+  }
+
+  .article_first_template{
+    width: 60%;
+    margin: 0 auto 0 auto; 
+    text-align: justify;
+  }
+
+  .slideshow_first_template{
+    width: 50%;
   }
 
   .fond_bottom{
@@ -688,7 +718,7 @@ body{
   width: 100%;
   height: 100vh;
   top: -10vh;
-  z-index: -1;
+  z-index: -1000;
 }
 
 p{
@@ -734,6 +764,7 @@ section.hero{
 }
 
 header.menu_desktop{
+  z-index: 1000;
   font-size: 1.2em;
   position: absolute;
   right: 0;
@@ -815,7 +846,7 @@ header .sous{
   padding: 10px 0 10px 0;
   position: absolute;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   margin-top: 1em;
   left: 0;
 }
@@ -831,14 +862,14 @@ header .sous li{
 header .sous a{
   padding: 10px 10px 10px 10px;
   border-bottom: none;
-  width: 83%;
+  width: 100% !important;
 }
 header .sous a:hover{
   border-bottom: none;
   background-color: rgba(223, 185, 190, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  width: 83%;
+  width: 100% !important;
   border-radius: 5px 5px 5px 5px;
   cursor: pointer;
 }
@@ -983,6 +1014,51 @@ header .deroulant > a::after{
     background-color: brown;
 }
 
+.box_1{
+  z-index: 1;
+  height: 70vh;
+  position: relative;
+  border-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(images/art_therapie_home.JPG);
+}
+
+.box_1 h1{
+  position: absolute;
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  opacity: 90%;
+  transition: opacity 2s;
+}
+
+.box_1 h1:hover{
+  opacity: 100%;
+  transition: opacity 2s;
+}
+
+.box_1 div{
+  height: 100%;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(207, 153, 161, 0) 0%, rgba(246, 186, 182, 1) 100%);
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 15px;
+}
+
+.box_1 div:hover{
+  background: linear-gradient(180deg, rgba(207, 153, 161, 0) 0%, rgba(246, 186, 182, 1) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .box_2 div{
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
@@ -1046,3 +1122,114 @@ footer {
 footer .nav_footer section ul{
     list-style: none;
 }
+
+/* Début Slider */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 1em;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(207, 153, 161, 0.2) 0%, rgba(246, 186, 182, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #D90429;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease-in-out;
+  border-radius: 10px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 1em;
+  border-radius: 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 1.5em;
+  padding: 1em 0 1em 0;
+  position: absolute;
+  bottom: 0.15em;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(207, 153, 161, 0.2) 0%, rgba(246, 186, 182, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
+  border-radius: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(207, 153, 161, 0.8);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #D90429;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Fin Slider */
