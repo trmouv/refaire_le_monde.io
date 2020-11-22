@@ -16,26 +16,34 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">Accueil</a>
+            <a href="#">Domaines d'intervention</a>
             <a href="#">Création</a>
-            <a href="#">Méditation artistique</a>
-            <a href="#">Art-thérapie</a>
-            <a href="#">Musicothérapie</a>
-            <a href="#">spectacles</a>
+            <a href="#">Spectacles</a>
+            <a href="#">Concerts</a>
             <a href="#">Actualités</a>
+            <a href="#">À propos</a>
           </div>
         </section>
         <section>
         <header class="menu_desktop">
             <nav>
-                <ul id="navigation_top">
-                    <li>Accueil</li>
-                    <li>Création</li>
-                    <li>Méditation Artistique</li>
-                    <li>Art-thérapie</li>
-                    <li>Musicothérapie</li>
-                    <li>Spectacles</li>
-                    <li>Actualités</li>
-                    <li><button>Contactez-moi</button></li>
+                <ul>
+                    <li class="menu_first_lvl"><a>Accueil</a></li>
+                    <li class="deroulant"><a href="#">Domaines d'intervention &ensp;</a>
+                        <ul class="sous">
+                            <li><a href="#">Art Thérapie</a></li>
+                            <li><a href="#">Musicothérapie</a></li>
+                            <li><a href="#">Sejours adaptés</a></li>
+                            <li><a href="#">Séjours créatifs</a></li>
+                            <li><a href="#">Éducation Nationale</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_first_lvl"><a>Création</a></li>
+                    <li class="menu_first_lvl"><a>Spectacles</a></li>
+                    <li class="menu_first_lvl"><a>Concerts</a></li>
+                    <li class="menu_first_lvl"><a>Actualités</a></li>
+                    <li class="menu_first_lvl"><a>À propos</a></li>
+                    <li class="menu_first_lvl" id="contact_btn_menu"><a>Contactez-moi</a></li>
                 </ul>
             </nav>
         </header>
@@ -46,25 +54,15 @@
             <button>Explorer le site</button>
         </section>
 
-        <section class="activite">
-            <h2>Activités artistiques</h2>
-            <article class="activites">
-                <article class="box_4" id="creation"><div><h3>Création</h3></div></article>
-                <article class="box_4" id="meditation"><div><h3>Méditation Artistique</h3></div></article>
-                <article class="box_4" id="musicotherapie"><div><h3>Musicothérapie</h3></div></article>
-                <article class="box_4" id="therapie"><div><h3>Art Thérapie</h3></div></article>
-            </article>
-        </section>
-
         <section class="intervention">
             <h2>Domaines d'intervention</h2>
             <article class="interventions">
-                <article class="box_3" id="pedagogie"><div><h3>Ateliers pédagogiques</h3></div></article>
-                <article class="box_3" id="improvisation"><div><h3>Ateliers d'improvisation</h3></div></article>
-                <article class="box_3" id="sejours_adapte"><div><h3>Séjours adaptés</h3></div></article>
-                <article class="box_3" id="intervention"><div><h3>Interventions artistiques</h3></div></article>
+                <article class="box_3" id="creation"><div><h3>Création</h3></div></article>
+                <article class="box_3" id="art_therapie"><div><h3>Art-thérapie</h3></div></article>
+                <article class="box_3" id="musicotherapie"><div><h3>Musicothérapie</h3></div></article>
+                <article class="box_3" id="sejour_adapte"><div><h3>Séjours adaptés</h3></div></article>
+                <article class="box_3" id="sejour_creatif"><div><h3>Séjours créatifs</h3></div></article>
                 <article class="box_3" id="education"><div><h3>Éducation nationale</h3></div></article>
-                <article class="box_3" id="plus"><h3>Voir plus</h3></article>
             </article>
         </section>
 

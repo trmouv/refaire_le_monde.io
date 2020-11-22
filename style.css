@@ -739,23 +739,115 @@ header.menu_desktop{
   right: 0;
   top: 0;
 }
+/* Menu Navigation */
 
-#navigation_top ul{
-    list-style: none;
+header nav ul {
+  list-style-type: none;
 }
 
-#navigation_top li{
-    display: inline;
-    margin-right: 20px;
-    font-weight: 500;
-    font-size: 1.1em;
-    color: #5b6065;
+header nav ul li{
+  padding: 0 10px 0 10px;
+  float: left;
+  text-align: center;
+  position: relative;
 }
 
-#navigation_top li:hover{
-    color: #D90429;
-    cursor: pointer;
+.menu_first_lvl{
+  padding: 1em 0.5em 1em 0.5em;
+  margin-right: 1em;
 }
+
+.menu_first_lvl:hover{
+  background: linear-gradient(180deg, rgba(241, 225, 227, 0.5) 0%, rgba(247, 238, 237, 0.5) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.deroulant{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.deroulant:hover{
+  background: linear-gradient(180deg, rgba(241, 225, 227, 0.5) 0%, rgba(247, 238, 237, 0.5) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+#contact_btn_menu{
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #D90429;
+  border-radius: 15px;
+}
+
+#contact_btn_menu a{
+  color: #fff;
+}
+
+header nav ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header nav a{
+  display: block;
+  text-decoration: none;
+  color: #5b6065;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+header nav a:hover{
+  color: #D90429;
+  cursor: pointer;
+}
+
+header .sous{
+  display: none;
+  background: linear-gradient(180deg, rgba(241, 225, 227, 0.95) 0%, rgba(247, 238, 237, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px 0 10px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 1em;
+  left: 0;
+}
+header nav > ul li:hover .sous{
+  display: block;
+  cursor: pointer;
+}
+header .sous li{
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+header .sous a{
+  padding: 10px 10px 10px 10px;
+  border-bottom: none;
+  width: 83%;
+}
+header .sous a:hover{
+  border-bottom: none;
+  background-color: rgba(223, 185, 190, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 83%;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+header .deroulant > a::after{
+  content:"▼";
+  font-size: 12px;
+}
+
+/* Fin Menu Navigation */
 
 .activites{
     display: grid;
@@ -796,25 +888,39 @@ header.menu_desktop{
     background-size: cover;
 }
 
-#meditation{
-    background-image: url("images/pexels-disha-sheta-4010464.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#art_therapie{
+  background-image: url("images/art_therapie_home.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #musicotherapie{
-    background-image: url("images/pexels-andrea-piacquadio-3800507.jpg");
+  background-image: url("images/musicotherapie_home.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sejour_adapte{
+    background-image: url("images/sejours_adaptes_home.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#therapie{
-    background-image: url("images/pexels-karolina-grabowska-4498195.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#sejour_creatif{
+  background-image: url("images/sejour_creatif_home.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#education{
+  background-image: url("images/pexels-cdc-3992949.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .interventions{
@@ -856,32 +962,6 @@ header.menu_desktop{
     color: #fff;
     position: relative;
     top: 40%;
-}
-
-#pedagogie{
-    background-image: url("images/pexels-startup-stock-photos-7096.jpg");
-}
-
-#improvisation{
-    background-image: url("images/pexels-cottonbro-4786236.jpg");
-}
-
-#sejours_adapte{
-    background-image: url("images/pexels-anny-patterson-1008357.jpg");
-}
-
-#intervention{
-    background-image: url("images/pexels-pixabay-33597.jpg");
-}
-
-#education{
-    background-image: url("images/pexels-cdc-3992949.jpg");
-}
-
-#plus{
-    background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .spectacles{

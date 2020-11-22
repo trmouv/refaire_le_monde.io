@@ -1,0 +1,65 @@
+<ul id="navigation_top">
+    <li>Accueil</li>
+    <li class="deroulant">Domaines d'intervention</li>
+        <ul class="sous_menu">
+            <li>Art Thérapie</li>
+            <li>Musicothérapie</li>
+            <li>Sejours adaptés</li>
+            <li>Séjours créatifs</li>
+            <li>Éducation Nationale</li>
+        </ul>
+    <li>Création</li>
+    <li>Spectacles</li>
+    <li>Concerts</li>
+    <li>Actualités</li>
+    <li>À propos</li>
+    <li><button>Contactez-moi</button></li>
+</ul>
+
+<style>
+#navigation_top ul{
+    list-style: none;
+}
+
+#navigation_top ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#navigation_top li{
+    display: inline;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #5b6065;
+}
+
+#navigation_top li:hover{
+    color: #D90429;
+    cursor: pointer;
+}
+
+.sous_menu li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.deroulant .sous_menu > a::after{
+  content: "+";
+  font-size: 12px;
+}
+
+.sous_menu{
+  display: none;
+  background-color: #D90429;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+#navigation_top > ul li:hover .sous_menu{
+  display: block;
+}    
+</style>
