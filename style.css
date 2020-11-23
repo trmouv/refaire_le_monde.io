@@ -665,6 +665,12 @@
     text-align: justify;
   }
 
+  .article_template_two{
+    width: 100%;
+    margin: 0 auto 0 auto; 
+    text-align: justify;
+  }
+
   .slideshow_first_template{
     width: 50%;
   }
@@ -1082,6 +1088,13 @@ header .deroulant > a::after{
 #education_nationale_article{
   background-image: url("images/pexels-cdc-3992949.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#denis_leroux_article{
+  background-image: url("images/Denis_Guitare.jpg");
+  background-position-y: 30%;
   background-repeat: no-repeat;
   background-size: cover;
 }
