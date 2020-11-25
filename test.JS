@@ -1,0 +1,1 @@
+var progressBarIndicator = document.querySelector('#progressbar div')

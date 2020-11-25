@@ -465,9 +465,9 @@
     position: absolute;
     transform: scaleX(-1);
     width: 100%;
-    height: 150vh;
+    height: 180vh;
     bottom: 0px;
-    z-index: -1;
+    z-index: -1000;
   }
   
   article.activites{
@@ -1362,13 +1362,192 @@ footer .nav_footer section ul{
 }
 /* Fin Accordéon */
 
-.bio_btn{
+#bio_btn{
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  padding: 1em 0 1em 0; 
-  background-color:  rgba(207, 153, 161, 0.5); 
+  width: 15em;
+  color: #5b6065;
+  padding: 1em 1em 1em 1em; 
+  background: linear-gradient(180deg, rgba(241, 225, 227, 0.5) 0%, rgba(247, 238, 237, 0.5) 100%);
   border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-.bio_btn:hover::after{
+#bio_btn:hover{
+  background-color:  rgba(207, 153, 161, 0.5);
+  color: #d90429;
+  font-weight: 700; 
+}
+
+#bio_btn:hover::after{
   content: " + " pos;
+}
+
+#bio_section{
+  display: none;
+  margin-bottom: 20em;
+}
+
+#margin_bottom_bio{
+  margin-bottom: 0em;
+}
+
+/* timeline */
+
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 20em;
+}
+
+.progression_bar{
+  height: 100%;
+  width: 0.5em;
+  background-color: rgba(207, 153, 161, 0.5);
+  border-radius: 50px;
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  position: absolute;
+  top : 50%;
+  left :50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress_bar{
+  display: none;
+  height: 10%;
+  width: 100%;
+  background-color: #d90429;
+  border-radius: 50px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgba(207, 153, 161, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  display: none;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  right: -0.625em;
+  background-color: #D90429;
+  border: 4px solid #D90429;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 25px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgba(207, 153, 161, 0.5);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(207, 153, 161, 0.5);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 25px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgba(207, 153, 161, 0.5);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(207, 153, 161, 0.5) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -0.625em;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: rgba(207, 153, 161, 0.5);
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Media queries - Responsive timeline on screens less than 1100px wide */
+@media screen and (max-width: 1100px) {
+  .timeline{
+    margin-bottom: 10em;
+  }
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid rgba(207, 153, 161, 0.5);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(207, 153, 161, 0.5) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 10px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
 }
