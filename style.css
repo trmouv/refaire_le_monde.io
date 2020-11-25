@@ -510,6 +510,10 @@
     border-radius: 15px;
   }
 
+  .box_1 h1{
+    font-size: 1.5em;
+  }
+
   footer nav.nav_footer{
     display: flex;
     flex-direction: row;
@@ -534,6 +538,13 @@
     "."
     "."; 
   }
+
+  #bio_btn{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 20em;
+  }  
 
 }
 
@@ -780,6 +791,27 @@ button{
     background-color: #D90429;
     border-radius: 15px;
     padding: 1em 1.5em 1em 1.5em;
+}
+
+.btn_1{
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: #5b6065;
+  padding: 1em 1em 1em 1em; 
+  background-color: rgba(241, 225, 227, 1);
+  border: none;
+  border-radius: 15px;
+  padding: 1em 1.5em 1em 1.5em;
+  cursor: pointer;
+}
+
+.btn_1:hover{
+  background-color:  rgba(207, 153, 161, 0.5);
+  color: #d90429;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 section h2 {
@@ -1362,29 +1394,6 @@ footer .nav_footer section ul{
 }
 /* Fin Accordéon */
 
-#bio_btn{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 15em;
-  color: #5b6065;
-  padding: 1em 1em 1em 1em; 
-  background: linear-gradient(180deg, rgba(241, 225, 227, 0.5) 0%, rgba(247, 238, 237, 0.5) 100%);
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-#bio_btn:hover{
-  background-color:  rgba(207, 153, 161, 0.5);
-  color: #d90429;
-  font-weight: 700; 
-}
-
-#bio_btn:hover::after{
-  content: " + " pos;
-}
-
 #bio_section{
   display: none;
   margin-bottom: 20em;
@@ -1459,8 +1468,8 @@ footer .nav_footer section ul{
   height: 0.8em;
   right: -0.625em;
   background-color: #D90429;
-  border: 4px solid #D90429;
-  top: 15px;
+  border: 4px solid rgba(207, 153, 161, 0.5);
+  top: 20px;
   border-radius: 50%;
   z-index: 1;
 }

@@ -57,11 +57,11 @@
         <article>
             <article class="box_1" id="denis_leroux_article"><div><h1>À propos de<br />Denis Leroux Gallego</h1></div></article>
             <article class="article_template_two" id="margin_bottom_bio">
-            <div style="font-size: 1.25em; margin: 2em 0 2em 0; background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%); padding: 1em 3em 1em 3em; color: #D90429; border-radius: 15px;backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);">
-                <p style="font-size: 1.25em;">Musicien autodidacte, guitariste, percussionniste, chanteur, comédien, créateur en M.A.O, auteur, compositeur interprète.</p>
-                <p style="font-size: 1.25em;">Intervenant musique auprès de personnes en situation de handicap depuis 1996, praticien certifié en médiation artistique, en Art-thérapie et en musicothérapie.</p>
+            <div style="font-size: 1em; margin: 2em 0 2em 0; background: linear-gradient(180deg, rgba(207, 153, 161, 0.5) 0%, rgba(246, 186, 182, 0.5) 100%); padding: 1em 3em 1em 3em; color: #D90429; border-radius: 15px;backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);">
+                <p>Musicien autodidacte, guitariste, percussionniste, chanteur, comédien, créateur en M.A.O, auteur, compositeur interprète.</p>
+                <p>Intervenant musique auprès de personnes en situation de handicap depuis 1996, praticien certifié en médiation artistique, en Art-thérapie et en musicothérapie.</p>
                 <p>Animateur d’ateliers pédagogiques, d’ateliers d’improvisation musicale et de séjours de  « Vacances – création », encadrant de séjours adaptés, intervenant artistique titulaire d’un agrément de l’Education nationale pour des projets de création en milieu scolaire, distingué de l’ordre des palmes académiques en 2020.</p>    
-                <div id="bio_btn" onclick="togg();togg1();togg2()">Voir la biographie complète</div>
+                <div style="width: 100%; text-align: center;"><button class="btn_1" onclick="togg();togg1();togg2()">Voir la biographie complète</button></div>
             </div>
             </article>
         </article>
@@ -381,6 +381,13 @@
         <div class="fond_bottom"></div>
 <!-- Début script -->        
         <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "40vh";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
             /* Afficher/masquer Timeline avec changement texte sur boutton */
             function togg1() {
             let x = document.getElementById("bio_btn");
