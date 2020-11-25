@@ -1521,6 +1521,14 @@ footer .nav_footer section ul{
   .timeline{
     margin-bottom: 10em;
   }
+
+  .progression_bar{
+    position: absolute;
+    top : 50%;
+    left :1.1em;
+    transform: translate(-50%, -50%);
+  }
+
   /* Place the timelime to the left */
   .timeline::after {
   left: 31px;
