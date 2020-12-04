@@ -484,13 +484,13 @@
 
   article.interventions{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1em;
     grid-template-areas:
-    ". ."
-    ". ."
-    ". .";
+    "."
+    "."
+    ".";
   }
 
   article.spectacles{
@@ -595,13 +595,11 @@
     article.interventions{
         z-index: 1;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 1em;
         grid-template-areas:
-        ". ."
-        ". ."
-        ". .";
+        ". . .";
     }
 
     article.spectacles{
@@ -696,6 +694,18 @@
     height: 77vh;
     bottom: 0px;
     z-index: -1;
+  }
+
+  .grid_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em 1em;
+    grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
   }
 
   .actualites{
@@ -1024,10 +1034,9 @@ header .deroulant > a::after{
 .interventions{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 1em 1em;
     grid-template-areas:
-    ". . ."
     ". . .";
 }
 
@@ -1220,6 +1229,54 @@ footer {
 footer .nav_footer section ul{
     list-style: none;
 }
+
+/* Page Méditation artistique */
+
+.nav_category{
+  margin-bottom: 1em !important;
+}
+
+.nav_category ul{
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2em 1em 2em 1em;
+  border-radius: 15px;
+  display: table-cell;
+}
+
+.nav_category li{
+  display: inline;
+  color: #5b6065;
+  padding: 1em 1em 1em 1em;
+  margin: 0 0.5em 0 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav_category li:hover{
+  color: #D90429;
+  background-color: #43474b2c;
+  cursor: pointer;
+}
+
+.nav_category li.activeTab{
+  color: #D90429 !important;
+  background-color: #43474b2c !important;
+  cursor: pointer;
+}
+
+/* Debut Style Tab */
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+/* Fin Style Tab */
+
+/* Fin Page Méditation artistique */
 
 /* Début Slider */
 * {box-sizing:border-box}
