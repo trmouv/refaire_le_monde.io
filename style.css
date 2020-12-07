@@ -553,8 +553,8 @@
   .nav_category li{
     display: block;
     color: #5b6065;
-    padding: 1em 1em 1em 1em;
-    margin: 0 0.5em 0 0;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -659,8 +659,8 @@
     .nav_category li{
       display: inline;
       color: #5b6065;
-      padding: 1em 1em 1em 1em;
-      margin: 0 0.5em 0 0;
+      padding: 0.5em 1em 0.5em 1em;
+      margin: 0;
       border-radius: 10px;
       cursor: pointer;
     }
@@ -781,8 +781,8 @@
   .nav_category li{
     display: inline;
     color: #5b6065;
-    padding: 1em 1em 1em 1em;
-    margin: 0 0.5em 0 0;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -1129,6 +1129,13 @@ header .deroulant > a::after{
   transition: opacity 2s;
 }
 
+#meditation_artistique_article{
+  background-image: url("images/DSC_0209-min.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #art_therapie_article{
   background-image: url("images/art_therapie_home.JPG");
   background-position: center;
@@ -1151,7 +1158,7 @@ header .deroulant > a::after{
 }
 
 #sejours_creatifs_article{
-  background-image: url("images/sejour_creatif_home.jpg");
+  background-image: url("images/IMG_4764 Modifié-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1272,7 +1279,7 @@ footer .nav_footer section ul{
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 2em 1em 2em 1em;
+  padding: 1em 1em 1em 1em;
   border-radius: 15px;
   display: table-cell;
 }
@@ -1286,6 +1293,35 @@ footer .nav_footer section ul{
 .nav_category li.activeTab{
   color: #D90429 !important;
   background-color: #43474b2c !important;
+  cursor: pointer;
+}
+
+.download_btn{
+  background-color: #60616313;
+  color: #5b6065; 
+  font-size: 1.25em; 
+  border-radius: 10px; 
+  padding: 1em; 
+  line-height: 1.5em;
+  cursor: pointer;
+  position: relative;
+}
+
+.download_btn::before{
+  position: absolute;
+  right: 1em;
+  top: 1.75em;
+  color: #5b6065;
+  content:"▼";
+}
+
+.download_btn:hover::before{
+  color: #d90429;
+}
+
+.download_btn:hover{
+  background-color: #43474b2c;
+  color: #D90429;
   cursor: pointer;
 }
 
