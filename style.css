@@ -509,7 +509,7 @@
     position: relative;
     border-radius: 15px;
   }
-
+  
   .box_1 h1{
     font-size: 1.5em;
   }
@@ -1304,20 +1304,21 @@ footer .nav_footer section ul{
   padding: 1em; 
   line-height: 1.5em;
   cursor: pointer;
-  position: relative;
 }
 
+/*
 .download_btn::before{
-  position: absolute;
-  right: 1em;
-  top: 1.75em;
+  margin-right: 1em ;
+  font-size: 1em;
   color: #5b6065;
   content:"▼";
 }
 
+
 .download_btn:hover::before{
   color: #d90429;
 }
+*/
 
 .download_btn:hover{
   background-color: #43474b2c;
